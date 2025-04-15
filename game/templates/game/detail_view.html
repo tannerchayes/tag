@@ -1,0 +1,10 @@
+<header>
+    <h1><a href="/">Text Adventure Game</a></h1>
+</header>
+
+
+<h1>{{ prompt.question }}</h1>
+{% for response in object.responses.all %}
+    <a href="{% url 'prompt-detail' response.next_prompt.pk %}">{{ response.text }}</a>
+{% endfor %}
+
