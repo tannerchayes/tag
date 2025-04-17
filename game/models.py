@@ -10,6 +10,7 @@ class Response(models.Model):
     text = models.TextField()
     prompt = models.ForeignKey(Prompt, on_delete=models.PROTECT, related_name="responses")
     next_prompt = models.ForeignKey(Prompt, null=True, on_delete=models.PROTECT, related_name="+")
+    # sword = models.BooleanField(default=False)
 
 
 # class Conclusion():
