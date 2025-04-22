@@ -1,6 +1,16 @@
-<h2>Login</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Log in</button>
-</form>
+<html>
+    <head>
+        <title>Login Screen</title>
+    </head>
+    <body>
+        <header>
+            <h2>Login</h2>
+        </header>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Log in</button>
+        </form>
+    </body>
+</html>
